@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100%;
+        }
+        .header-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            overflow: hidden;
+        }
+        .header-container img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover; 
+        }
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+            margin-top: 10px;
+            padding: 20px;
+            gap: 15px;
+        }
+        .navigation a {
+            padding: 8px 20px;
+            text-decoration: none;
+            color: #662222;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .navigation a:hover {
+            background-color: #662222;
+            color: white;
+            border-radius: 5px;
+        }
+        .navigation a.active {
+            font-weight: 700;
+            background-color: #662222;
+            color: white;
+            border-radius: 5px;
+        }
+        /* Footer */
+        .footer {
+            background-color: #662222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+           
+            
+            .navigation {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-container">
+            <img src="logo.png" alt="Header Banner" width="100%" height="100px">
+        </div>
+        <nav class="navigation">
+            <a href="index.html">HOME</a>
+            <a href="bio.html">BIO</a>
+            <a href="hobbies.html" class="active">HOBBIES</a>
+            <a href="campuslife.html">CAMPUS LIFE</a>
+        </nav>
+                
+        <!-- Footer -->
+        <footer class="footer">
+            &copy; Anis Athirah 2025 | Lab3 Web Development
+        </footer>
+    </div>
+</body>
+</html>

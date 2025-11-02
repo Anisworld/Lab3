@@ -10,35 +10,29 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             background-color: white;
         }
-        
         .container {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             width: 100%;
         }
-        
         .header-container {
             display: flex;
             flex-direction: row;
             width: 100%;
             overflow: hidden;
         }
-        
         .header-container img {
             width: 100%;
             height: 120px;
             object-fit: cover; 
         }
-        
-        /* Centered Navigation */
         .navigation {
             display: flex;
             flex-direction: row;
@@ -49,7 +43,6 @@
             padding: 20px;
             gap: 15px;
         }
-        
         .navigation a {
             padding: 8px 20px;
             text-decoration: none;
@@ -57,21 +50,17 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
         .navigation a:hover {
             background-color: #662222;
             color: white;
             border-radius: 5px;
         }
-        
-        /* Active/Current Page Style */
         .navigation a.active {
             font-weight: 700;
             background-color: #662222;
             color: white;
             border-radius: 5px;
         }
-        
         /* Bio Content */
         .content {
             flex: 1;
@@ -84,13 +73,12 @@
         .bio-container {
             display: flex;
             gap: 40px;
-            background-color: #fffbef;
+            background-color: #f5ecd0;
             border-radius: 15px;
             padding: 40px;
             box-shadow: 0 4px 6px rgba(102, 34, 34, 0.1);
         }
-        
-        /* Left Side - Profile Image */
+        /*Profile Image */
         .profile-section {
             flex: 0 0 300px;
             display: flex;
@@ -98,7 +86,6 @@
             align-items: center;
             gap: 20px;
         }
-        
         .profile-image {
             width: 250px;
             height: 250px;
@@ -107,15 +94,12 @@
             border: 5px solid #662222;
             box-shadow: 0 4px 10px rgba(102, 34, 34, 0.2);
         }
-        
         .profile-name {
             text-align: center;
             color: #662222;
             font-size: 24px;
             font-weight: 700;
         }
-        
-        /* Right Side - Information */
         .info-section {
             flex: 1;
         }
@@ -210,25 +194,21 @@
         <div class="header-container">
             <img src="logo.png" alt="Header Banner" width="100%" height="100px">
         </div>
-        
-        <!-- Centered Navigation -->
         <nav class="navigation">
             <a href="index.html">HOME</a>
             <a href="bio.html" class="active">BIO</a>
             <a href="hobbies.html">HOBBIES</a>
             <a href="campuslife.html">CAMPUS LIFE</a>
         </nav>
-        
         <!-- Bio Content -->
         <div class="content">
             <div class="bio-container">
-                <!-- Left Side - Profile -->
+                <!-- Profile -->
                 <div class="profile-section">
                     <img src="myself.jpg" alt="Anis Athirah" class="profile-image">
                     <div class="profile-name">Nur Anis Athirah Binti Yusri</div>
                 </div>
-                
-                <!-- Right Side - Information -->
+                <!-- details -->
                 <div class="info-section">
                     <h2>Personal Information</h2>
                     
@@ -250,7 +230,6 @@
                             <div class="info-value">Female</div>
                         </div>
                     </div>
-                    
                     <div class="info-group">
                         <h3>Address</h3>
                         <div class="info-row">
@@ -270,7 +249,6 @@
                             <div class="info-value">Terengganu</div>
                         </div>
                     </div>
-                    
                     <div class="info-group">
                         <h3>Contact</h3>
                         <div class="info-row">
@@ -278,7 +256,6 @@
                             <div class="info-value">019-9849692</div>
                         </div>
                     </div>
-                    
                     <div class="info-group">
                         <h3>Education & Skills</h3>
                         <div class="info-row">
@@ -298,7 +275,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="info-group">
                         <h3>Personal</h3>
                         <div class="info-row">
@@ -315,7 +291,6 @@
                 </div>
             </div>
         </div>
-        
         <!-- Footer -->
         <footer class="footer">
             &copy; Anis Athirah 2025 | Lab3 Web Development
