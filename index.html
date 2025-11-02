@@ -4,115 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-     <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
         .container {
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            min-height: 100vh;
             width: 100%;
         }
+        
         .header-container {
             display: flex;
             flex-direction: row;
             width: 100%;
             overflow: hidden;
         }
+        
         .header-container img {
             width: 100%;
             height: 100px;
             object-fit: cover; 
         }
-        .logo{
+        
+        .logo {
             display: flex;
-            flex-direction: row ;
+            flex-direction: row;
             justify-content: flex-start;
             height: auto;
             width: auto;
         }
-        .logo img{
+        
+        .logo img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             margin-left: 30px;
             object-fit: cover; 
-        }   
+        }
+        
+        /* Centered Navigation */
         .navigation {
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            align-items: center;
             min-height: 50px;
             margin-top: 10px;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 20px;
-        }
-        .navigation a{
-            margin: 10px;
-        }
-        .content{
-            display: flex;
-            flex-direction: row;
-            padding-right: 20px;
-        }
-        .sidebar{
-            display: flex;
-            flex-direction: column;
-            background-color:#662222 ;
-            padding: 10px;
-            margin: 30px;
-            border-radius: 10px;
-            width: 250px;
-        }
-        .sidebar h3{
-            color: white;
-           text-align: center;
-        }
-        .imgcarousel{
-            display: flex;
-            flex-direction: column;
-            background-color:#662222 ;
-            border-radius: 10px;
-            width: 100%;
-            padding: 10px;
-            margin: 30px;
-        }
-        .imgcarousel h3{
-            color: white;
-            text-align: center;
+            padding: 20px;
+            gap: 15px;
         }
         
+        .navigation a {
+            padding: 8px 20px;
+            text-decoration: none;
+            color: #662222;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .navigation a:hover {
+            background-color: #662222;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        /* Active/Current Page Style */
+        .navigation a.active {
+            font-weight: 700;
+            background-color: #662222;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        /* Content with sidebar on left */
+        .content {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        .sidebar {
+            order: 1;
+        }
+        
+        .textintro {
+            flex: 1;
+            padding: 24px;
+            order: 2;
+        }
+        
+        .textintro h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        /* Sidebar on the left */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            background-color: #662222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            height: fit-content;
+            align-self: flex-start;
+        }
+        
+        .sidebar h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transform: translateX(5px);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #662222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                order: 2;
+            }
+            
+            .textintro {
+                order: 1;
+            }
+            
+            .navigation {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header-container">
-            <img src="logo_home.jpg" alt="" width="100%" height="100px">
+            <img src="logo.png" alt="Header Banner" width="100%" height="100px">
         </div>
-        <div class="logo">
-            <img src="myself.jpg" alt="myself">
-            <div class="navigation">
-                <a href="">HOME</a>
-                <a href="">BIO</a>
-                <a href="">HOBBIES</a>
-                <a href="">CAMPUS LIFE</a>
-            </div>
-        </div>
+        <!-- Centered Navigation -->
+        <nav class="navigation">
+            <a href="index.html" class="active">HOME</a>
+            <a href="bio.html">BIO</a>
+            <a href="hobbies.html">HOBBIES</a>
+            <a href="campuslife.html">CAMPUS LIFE</a>
+        </nav>
+        
+        <!-- Content with Sidebar on Left -->
         <div class="content">
-            <div class="sidebar">
+            <aside class="sidebar">
                 <h3>SOCIAL MEDIA</h3>
-            </div>
-            <div class="imgcarousel">
-                <h3>IMAGE SUMMARY</h3>
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/en/" target="_blank">Tiktok</a>
+                <a href="https://www.linkedin.com/in/nur-anis-athirah-yusri-2a085823b" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Anisworld" target="_blank">Github</a>
+            </aside>
+            
+            <div class="textintro">
+                <h1>Hi, Welcome To My Website!!!</h1>
+                <p style="text-align: center; margin-top: 20px;">
+                    Explore my personal space where I share my journey, interests, and experiences.
+                </p>
             </div>
         </div>
-        <div class="footer">
-             &copy Anis 2025
-        </div>
-
+        
+        <!-- Footer -->
+        <footer class="footer">
+            &copy; Anis Athirah 2025 | Lab3 Web Development
+        </footer>
     </div>
 </body>
 </html>
