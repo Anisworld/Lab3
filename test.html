@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio - My Website</title>
+    <title>Campus Life - My Website</title>
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background-color: white;
+            background-color: #f9f5f0;
         }
         
         .container {
@@ -72,95 +72,65 @@
             border-radius: 5px;
         }
         
-        /* Bio Content */
+        /* Gallery Content */
         .content {
             flex: 1;
             padding: 40px 20px;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             width: 100%;
         }
         
-        .bio-container {
-            display: flex;
-            gap: 40px;
-            background-color: #fffcf3;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 4px 6px rgba(102, 34, 34, 0.1);
-        }
-        
-        /* Left Side - Profile Image */
-        .profile-section {
-            flex: 0 0 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .profile-image {
-            width: 250px;
-            height: 250px;
-            border-radius: 150px;
-            object-fit: cover;
-            border: 5px solid #662222;
-            box-shadow: 0 4px 10px rgba(102, 34, 34, 0.2);
-        }
-        
-        .profile-name {
+        .page-title {
             text-align: center;
+            color: #662222;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        
+        /* Portfolio Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(102, 34, 34, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(102, 34, 34, 0.2);
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-content {
+            padding: 25px;
+        }
+        
+        .gallery-title {
             color: #662222;
             font-size: 24px;
             font-weight: 700;
-        }
-        
-        /* Right Side - Information */
-        .info-section {
-            flex: 1;
-        }
-        
-        .info-section h2 {
-            color: #662222;
-            margin-bottom: 25px;
-            font-size: 28px;
-            border-bottom: 3px solid #662222;
-            padding-bottom: 10px;
-        }
-        
-        .info-group {
-            margin-bottom: 30px;
-        }
-        
-        .info-group h3 {
-            color: #662222;
             margin-bottom: 15px;
-            font-size: 20px;
         }
         
-        .info-row {
-            display: flex;
-            padding: 12px 0;
-            border-bottom: 1px solid #f0e6dc;
-        }
-        
-        .info-row:last-child {
-            border-bottom: none;
-        }
-        
-        .info-label {
-            flex: 0 0 180px;
-            font-weight: 600;
-            color: #662222;
-        }
-        
-        .info-value {
-            flex: 1;
+        .gallery-description {
             color: #333;
-        }
-        
-        .address-sub {
-            margin-left: 20px;
+            line-height: 1.6;
+            font-size: 16px;
         }
         
         /* Footer */
@@ -174,28 +144,13 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
-            .bio-container {
-                flex-direction: column;
-                padding: 20px;
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
             
-            .profile-section {
-                flex: none;
-                width: 100%;
-            }
-            
-            .profile-image {
-                width: 200px;
-                height: 200px;
-            }
-            
-            .info-row {
-                flex-direction: column;
-                gap: 5px;
-            }
-            
-            .info-label {
-                flex: none;
+            .page-title {
+                font-size: 28px;
             }
             
             .navigation {
@@ -214,89 +169,132 @@
         <!-- Centered Navigation -->
         <nav class="navigation">
             <a href="index.html">HOME</a>
-            <a href="bio.html" class="active">BIO</a>
+            <a href="bio.html">BIO</a>
             <a href="hobbies.html">HOBBIES</a>
-            <a href="campuslife.html">CAMPUS LIFE</a>
+            <a href="campuslife.html" class="active">CAMPUS LIFE</a>
         </nav>
         
-        <!-- Bio Content -->
+        <!-- Gallery Content -->
         <div class="content">
-            <div class="bio-container">
-                <!-- Left Side - Profile -->
-                <div class="profile-section">
-                    <img src="myself.jpg" alt="Anis Athirah" class="profile-image">
-                    <div class="profile-name">Nur Anis Athirah Binti Yusri</div>
+            <h1 class="page-title">My Campus Life</h1>
+            
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item">
+                    <img src="1.frenchfest.jpg" alt="french festival" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">Language Festival (French)</h2>
+                        <p class="gallery-description">
+                            <b>28/5/2024</b><br>
+                            For my Language class which is French, i have a mini project where i need to conduct a exhibition and explain about French's Traditional Game to community in PTTA, UTHM.
+                        </p>
+                    </div>
                 </div>
                 
-                <!-- Right Side - Information -->
-                <div class="info-section">
-                    <h2>Personal Information</h2>
-                    
-                    <div class="info-group">
-                        <div class="info-row">
-                            <div class="info-label">Date of Birth</div>
-                            <div class="info-value">03/12/2002</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Religion</div>
-                            <div class="info-value">Islam</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Race</div>
-                            <div class="info-value">Melayu</div>
-                        </div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <img src="2.theathre.jpg" alt="theathre performance" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">Theathre Performance</h2>
+                        <p class="gallery-description">
+                            <b>27/6/2024</b><br>
+                            i have join theathre club and today i have performance. Our Title is "Cimmeris". 
+                        </p>
                     </div>
-                    
-                    <div class="info-group">
-                        <h3>Address</h3>
-                        <div class="info-row">
-                            <div class="info-label">Street</div>
-                            <div class="info-value">1736, Jalan Kp Perdana</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Town</div>
-                            <div class="info-value">Kubang Parit</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">District</div>
-                            <div class="info-value">Kuala Terengganu</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">State</div>
-                            <div class="info-value">Terengganu</div>
-                        </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <img src="3.badminton.jpg" alt="badminton Session" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">Badminton Session</h2>
+                        <p class="gallery-description">
+                            <b>7/12/2024</b><br>
+                            A Badminton activity with my housemate. We have a lot of fun together!!
+                        </p>
                     </div>
-                    
-                    <div class="info-group">
-                        <h3>Contact</h3>
-                        <div class="info-row">
-                            <div class="info-label">Mobile Phone</div>
-                            <div class="info-value">019-9849692</div>
-                        </div>
+                </div>
+                
+                 <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <img src="4.ProgramBaktisiswa.jpg" alt="Volunteering" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">Baktisiswa Program (Volunteering)</h2>
+                        <p class="gallery-description">
+                            <b>11/12/2024</b><br>
+                            My First Volunteering program with ITC Club. 
+                            This program help me growth my connection. 
+                        </p>
+                        </p>
                     </div>
-                    
-                    <div class="info-group">
-                        <h3>Education & Skills</h3>
-                        <div class="info-row">
-                            <div class="info-label">Course and Institution</div>
-                            <div class="info-value">Bachelor of Computer Science (Software Engineering), UTHM</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Programming Skills</div>
-                            <div class="info-value">PHP, HTML, CSS, JavaScript and C Languages</div>
-                        </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item">
+                    <img src="5.ProgramTrailblaze.jpg" alt="cocurricular" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">TrailBlaze Program (co-curricular)</h2>
+                        <p class="gallery-description">
+                            <b>4/1/2024</b><br>
+                           This is my co-curricular's program.
+                        </p>
+                        </p>
                     </div>
-                    
-                    <div class="info-group">
-                        <h3>Personal</h3>
-                        <div class="info-row">
-                            <div class="info-label">Hobbies</div>
-                            <div class="info-value">Read book and Cook</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">2025 Wishlist</div>
-                            <div class="info-value">Complete 50% of my PSM before 2025 end.</div>
-                        </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item">
+                    <img src="6.HariRayacelebration.jpg" alt="Hari Raya celebration" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">Hari Raya celebration with Classmate</h2>
+                        <p class="gallery-description">
+                            <b>12/4/2025</b><br>
+                            My Classmate has conducted an Open House to celebrate hari raya together. All of us have bring different type of food to share together. 
+                        </p>
+                    </div>
+                </div>
+                 <!-- Gallery Item 7 -->
+                <div class="gallery-item">
+                    <img src="7.sulam.jpg" alt="Sulam" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">SULAM</h2>
+                        <p class="gallery-description">
+                             <b>27/5/2025</b><br>
+                             We have conducted a SULAM PROGRAM, where in this program we teach a primary student from SK Sungai Tongkang to build a very simple Game using Scratch. 
+                        </p>
+                    </div>
+                </div>
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item">
+                    <img src="8.careerX.jpg" alt="careerX" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">CareerX</h2>
+                        <p class="gallery-description">
+                            <b>20/5/2025</b><br>
+                            My first ever group competition i have joined in my degree life. It such a amazing even though it is last minute 
+                            but we still manage to get top 5. 
+                        </p>
+                    </div>
+                </div>
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item">
+                    <img src="9.deansaward.jpg" alt="deans" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">Dean's Award</h2>
+                        <p class="gallery-description">
+                            <b>11/6/2025</b><br>
+                            Unforgettable memories in my degree life. A lot more to achieve!!
+                        </p>
+                    </div>
+                </div>
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item">
+                    <img src="10.industryvisit.jpg" alt="Industry Visit" class="gallery-image">
+                    <div class="gallery-content">
+                        <h2 class="gallery-title">Industry Visit at Apple Store</h2>
+                        <p class="gallery-description">
+                            Thanks to ITC Club, for conducting this program because i have so much fun and i also get new knowledge while joinning this program.
+                        </p>
                     </div>
                 </div>
             </div>
