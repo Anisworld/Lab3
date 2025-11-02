@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bio</title>
+    <title>My Hobbies</title>
     <style>
         * {
             margin: 0;
@@ -61,6 +61,71 @@
             color: white;
             border-radius: 5px;
         }
+
+        /* Hobbies Content */
+        .content {
+            flex: 1;
+            padding: 30px 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .page-title {
+            text-align: center;
+            color: #662222;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .page-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Hobbies Grid */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .hobby-card {
+            background-color: #efd0c5;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(102, 34, 34, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(102, 34, 34, 0.2);
+        }
+        .hobby-title {
+            color: #662222;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .hobby-description {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        /* Hobby Number Badge */
+        .hobby-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #662222;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
         /* Footer */
         .footer {
             background-color: #662222;
@@ -72,7 +137,14 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
-           
+            .hobbies-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .page-title {
+                font-size: 28px;
+            }
             
             .navigation {
                 flex-wrap: wrap;
@@ -92,6 +164,51 @@
             <a href="hobbies.html" class="active">HOBBIES</a>
             <a href="campuslife.html">CAMPUS LIFE</a>
         </nav>
+        <!-- Hobbies Content -->
+        <div class="content">
+            <h1 class="page-title">My Hobbies</h1>
+            <p class="page-subtitle">Things I love to do in my free time</p>
+
+            <div class="hobbies-grid">
+                <!-- Hobby 1: Cooking -->
+                <div class="hobby-card">
+                    <div class="hobby-number">1</div>
+                    <h2 class="hobby-title">Cooking</h2>
+                    <p class="hobby-description">
+                        I love creating delicious meals.Cooking is my creative outlet where I can blend flavors and make something special for myself and loved ones.
+                    </p>
+                </div>
+
+                <!-- Hobby 2: Read a Book -->
+                <div class="hobby-card">
+                    <div class="hobby-number">2</div>
+                    <h2 class="hobby-title">Read a Book</h2>
+                    <p class="hobby-description">
+                        Reading transports me to different worlds and expands my knowledge.
+                    </p>
+                </div>
+
+                <!-- Hobby 3: Crochet -->
+                <div class="hobby-card">
+                    <div class="hobby-number">3</div>
+                    <h2 class="hobby-title">Crochet</h2>
+                    <p class="hobby-description">
+                        Crocheting is both relaxing and rewarding. I enjoy creating handmade items like scarves, blankets, and cute amigurumi.
+                        I also sell this whenever i have my free time.
+                    </p>
+                </div>
+
+                <!-- Hobby 4: Watch Netflix -->
+                <div class="hobby-card">
+                    <div class="hobby-number">4</div>
+                    <h2 class="hobby-title">Watch Netflix</h2>
+                    <p class="hobby-description">
+                        I enjoy unwinding with a good series or movie on Netflix. 
+                        From thrilling dramas to heartwarming comedies, it's my go-to way to release my stress after an hectic day.
+                    </p>
+                </div>
+            </div>
+        </div>
                 
         <!-- Footer -->
         <footer class="footer">
